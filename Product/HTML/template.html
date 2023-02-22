@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/require/Template+CSS+Template.css">
+    <link rel="stylesheet" href="/require/Template+CSS+minh.css">
+    <title>THE DMZ ♢</title>
+</head>
+
+<body>
+    <div class="Main">
+        <div class="ontop active-blur hide fullhide" id="phone-nav">
+            <div class="active-ot hide fullhide" id="nav-main">
+                <div class="header-ot">
+                    <img src="/require/Data+img+logo-black.png" alt="" onclick="window.open('/home','_self')">
+                    <i class="fa-sharp fa-solid fa-circle-xmark exit" onclick="closenav()"></i>
+                </div>
+                <div class="body-ot">
+                    <div class="action-btn" act="false">
+                        <strong onclick="showList(this)">Product</strong>
+                        <div class="lister-normal lister" name="lister">
+                            <div class="listBtn">
+                                Chirstmas gift
+                            </div>
+                            <div class="listBtn">
+                                Best seller
+                            </div>
+                            <div class="listBtn">
+                                Limited items
+                            </div>
+                        </div>
+                    </div>
+                    <div class="action-btn" act="false">
+                        <strong onclick="showList(this)">Promo</strong>
+                        <div class="lister-normal lister" name="lister">
+                            <div class="listBtn">
+                                Chirstmas gift
+                            </div>
+                            <div class="listBtn">
+                                Best seller
+                            </div>
+                            <div class="listBtn">
+                                Limited items
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="background">
+            <div class="bg-datetime">
+                <img src="/require/Data+img+BG-aim.jpg" alt="" id="img-bg-3">
+                <canvas id="bg-snow"></canvas>
+                <div class="bg-countdown" id="dateTimeCount">
+                    <div class="countBox" id="count-day">
+                        <p>
+                            DAY
+                        </p>
+                        <div id="DayDisplay" class="display-count">
+                            <p>
+                                00
+                            </p>
+                        </div>
+                    </div>
+                    <div class="countBox" id="count-hour">
+                        <p>
+                            HOUR
+                        </p>
+                        <div id="HourDisplay" class="display-count">
+                            <p>
+                                00
+                            </p>
+                        </div>
+                    </div>
+                    <div class="countBox" id="count-min">
+                        <p>
+                            MIN
+                        </p>
+                        <div id="MinDisplay" class="display-count">
+                            <p>
+                                00
+                            </p>
+                        </div>
+                    </div>
+                    <div class="countBox" id="count-sec">
+                        <p>
+                            SEC
+                        </p class="display-count">
+                        <div id="SecDisplay" class="display-count">
+                            <p>
+                                00
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="webPage">
+            <div class="header">
+                <div class="header-nav" onclick="opennav()">
+                    <i class="fa-solid fa-list"></i>
+                </div>
+                <img src="/require/Data+img+logo-black.png" alt="" class="header-logo" onclick="window.open('/home','_self')">
+                <div class="header-action">
+                    <div class="action-button">
+                        <button onmouseenter="hoverButtonEnter(this)"
+                            onmouseleave="hoverButtonLeft(this)"
+                            onclick="window.open('/product?u=promotion')" style="color: black;">Promo</button>
+                        <p class="unactive-ud" style="color: black;"></p>
+                    </div>
+                    <div class="searchEngine">
+                        <input type="search" placeholder="What do you want...?" id="SearchInput" onkeydown="searchLiveChange(this)" onblur="stopSearchPanel()" onkeypress="checkEnter()" style="border: 1px solid rgba(70,70,70,0.5);">
+                        <div class="SearchPanel" id="SearchPanel" style="display: none;">
+    
+                        </div>
+                    </div>
+                    <div class="action-button">
+                        <button onmouseenter="hoverButtonEnter(this)"
+                            onmouseleave="hoverButtonLeft(this)"
+                            onclick="window.open('/product?u=promotion')" style="color: black;">Product</button>
+                        <p class="unactive-ud" style="color: black;"></p>
+                    </div>
+                    <div class="account" onclick="accountCenter('click')" onmouseover="accountCenter('hover')" onmouseleave="accountCenter('mleave')" id="Signin-Btn">
+                        <i class="fa-solid fa-user" style="color: black;"></i>
+                        <span style="color: black;">Sign in</span>                    
+                        <div class="accountOption" style="display: none;">
+                            <ul>
+                                <li onclick="window.open('/cart', '_self')">
+                                    Shopping cart
+                                </li>
+                                <li onclick="alert('Not available now...')">Account manager</li>
+                                <li onclick="logout_simple()">Logout</li>
+                                <li onclick="alert('Supporter is busy...')">Support?</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="ghost">
+            </div>
+            <div class="div">
+
+            </div>
+            <div class="Banner">
+                <div class="sliderContain" style="height: 25vh; width: 100vw; margin: auto;" id="Banner-localAds">
+                    <div class="Controller">
+                        <div class="ButtonLeft btnIco"><i class="fa-sharp fa-solid fa-less-than"></i></div>
+                        <div class="TabPanel">
+                            <div class="imgTar">0/0</div>
+                        </div>
+                        <div class="ButtonRight btnIco"><i class="fa-sharp fa-solid fa-greater-than"></i></div>
+                    </div>
+                    <div class="item fade"></div>
+                </div>
+            </div>
+            <div class="minhdiv">
+                <!--Sell zone-->
+                <div style="background-color:black" class="BestSeller">
+                    <h1 class="Pacifico" style="color: #bfdbd8;text-align: center; margin: 0;">
+                        BEST SELLER
+                    </h1>
+                </div>
+                <div class="PostSlide">
+                    <div class="Post">
+                        <!--Code post trong day, can: img, title, description-->
+                        <div class="PostImg">
+                            <img src="/require/Data+img+santa-catching-pole.jpg" alt="">
+                        </div>
+                        <div class="PostInfo">
+                            <div class="PostTitle">
+                                <strong>SANTA catching machine</strong>
+                            </div>
+                            <div class="PostPrice">
+                                <strong>5000$</strong>
+                            </div>
+                            <div class="ProductStatus">
+                                <div class="ProductRate">
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                </div>
+                                <div class="ProductSold">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    <span>18.0k sold</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Post">
+                        <!--Code post trong day, can: img, title, description-->
+                        <div class="PostImg">
+                            <img src="/require/Data+img+santa-catching-pole.jpg" alt="">
+                        </div>
+                        <div class="PostInfo">
+                            <div class="PostTitle">
+                                <strong>SANTA catching machine</strong>
+                            </div>
+                            <div class="PostPrice">
+                                <strong>5000$</strong>
+                            </div>
+                            <div class="ProductStatus">
+                                <div class="ProductRate">
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                </div>
+                                <div class="ProductSold">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    <span>18.0k sold</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Post">
+                        <!--Code post trong day, can: img, title, description-->
+                        <div class="PostImg">
+                            <img src="/require/Data+img+santa-catching-pole.jpg" alt="">
+                        </div>
+                        <div class="PostInfo">
+                            <div class="PostTitle">
+                                <strong>SANTA catching machine</strong>
+                            </div>
+                            <div class="PostPrice">
+                                <strong>5000$</strong>
+                            </div>
+                            <div class="ProductStatus">
+                                <div class="ProductRate">
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                </div>
+                                <div class="ProductSold">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    <span>18.0k sold</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Post">
+                        <!--Code post trong day, can: img, title, description-->
+                        <div class="PostImg">
+                            <img src="/require/Data+img+santa-catching-pole.jpg" alt="">
+                        </div>
+                        <div class="PostInfo">
+                            <div class="PostTitle">
+                                <strong>SANTA catching machine</strong>
+                            </div>
+                            <div class="PostPrice">
+                                <strong>5000$</strong>
+                            </div>
+                            <div class="ProductStatus">
+                                <div class="ProductRate">
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                </div>
+                                <div class="ProductSold">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    <span>18.0k sold</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Post">
+                        <!--Code post trong day, can: img, title, description-->
+                        <div class="PostImg">
+                            <img src="/require/Data+img+santa-catching-pole.jpg" alt="">
+                        </div>
+                        <div class="PostInfo">
+                            <div class="PostTitle">
+                                <strong>SANTA catching machine</strong>
+                            </div>
+                            <div class="PostPrice">
+                                <strong>5000$</strong>
+                            </div>
+                            <div class="ProductStatus">
+                                <div class="ProductRate">
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                </div>
+                                <div class="ProductSold">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    <span>18.0k sold</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="background-color: black" class="BestSeller">
+                    <h1 class="Pacifico" style="color: #bfdbd8;text-align: center;">
+                        LIMITED ITEMS
+                    </h1>
+                </div>
+                <div class="PostSlide">
+                    <div class="Post">
+                        <!--Code post trong day, can: img, title, description-->
+                        <div class="PostImg">
+                            <img src="/require/Data+img+Limited-items.jpg" alt="">
+                        </div>
+                        <div class="PostInfo">
+                            <div class="PostTitle">
+                                <strong>[SANTA] Blade</strong>
+                            </div>
+                            <div class="PostPrice">
+                                <strong>10000$</strong>
+                            </div>
+                            <div class="ProductStatus">
+                                <div class="ProductRate">
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                </div>
+                                <div class="ProductSold">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    <span>500 sold</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Post">
+                        <!--Code post trong day, can: img, title, description-->
+                        <div class="PostImg">
+                            <img src="/require/Data+img+Limited-items.jpg" alt="">
+                        </div>
+                        <div class="PostInfo">
+                            <div class="PostTitle">
+                                <strong>[SANTA] Blade</strong>
+                            </div>
+                            <div class="PostPrice">
+                                <strong>10000$</strong>
+                            </div>
+                            <div class="ProductStatus">
+                                <div class="ProductRate">
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                </div>
+                                <div class="ProductSold">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    <span>500 sold</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Post">
+                        <!--Code post trong day, can: img, title, description-->
+                        <div class="PostImg">
+                            <img src="/require/Data+img+Limited-items.jpg" alt="">
+                        </div>
+                        <div class="PostInfo">
+                            <div class="PostTitle">
+                                <strong>[SANTA] Blade</strong>
+                            </div>
+                            <div class="PostPrice">
+                                <strong>10000$</strong>
+                            </div>
+                            <div class="ProductStatus">
+                                <div class="ProductRate">
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                </div>
+                                <div class="ProductSold">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    <span>500 sold</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Post">
+                        <!--Code post trong day, can: img, title, description-->
+                        <div class="PostImg">
+                            <img src="/require/Data+img+Limited-items.jpg" alt="">
+                        </div>
+                        <div class="PostInfo">
+                            <div class="PostTitle">
+                                <strong>[SANTA] Blade</strong>
+                            </div>
+                            <div class="PostPrice">
+                                <strong>10000$</strong>
+                            </div>
+                            <div class="ProductStatus">
+                                <div class="ProductRate">
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                </div>
+                                <div class="ProductSold">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    <span>500 sold</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Post">
+                        <!--Code post trong day, can: img, title, description-->
+                        <div class="PostImg">
+                            <img src="/require/Data+img+Limited-items.jpg" alt="">
+                        </div>
+                        <div class="PostInfo">
+                            <div class="PostTitle">
+                                <strong>[SANTA] Blade</strong>
+                            </div>
+                            <div class="PostPrice">
+                                <strong>10000$</strong>
+                            </div>
+                            <div class="ProductStatus">
+                                <div class="ProductRate">
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                    <i class="fa-solid fa-star" style="color: rgb(255, 251, 0);"></i>
+                                </div>
+                                <div class="ProductSold">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    <span>500 sold</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <img src="/require/Data+img+logo.png" alt="" class="footer-logo">
+                <div class="packer">
+                    <ul>
+                        <li>REGISTERED AT U.S.A</li>
+                        <li>REGISTERED AT ASIA</li>
+                        <li>REGISTERED AT UK</li>
+                        <li>REGISTERED AT UA</li>
+                    </ul>
+                    <ul>
+                        <li><select name="" id="lang">
+                            <option value="english">--EN--</option>
+                            <option value="Vietnamese">--VN--</option>
+                            <option value="">--FR--</option>
+                        </select></li>
+                        <li></li>
+                        <li></li>
+                        <li>COPYRIGHT@2022</li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/require/Slider+zeakSlide.js"></script>
+    <script src="/require/Template+JS+AdvanceRender.js"></script>
+    <script src="/require/Template+JS+template.js"></script>
+    <script src="https://kit.fontawesome.com/9c3c828c74.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

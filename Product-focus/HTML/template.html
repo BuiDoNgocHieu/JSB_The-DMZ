@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css"
+        integrity="sha512-HqxHUkJM0SYcbvxUw5P60SzdOTy/QVwA1JJrvaXJv4q7lmbDZCmZaqz01UPOaQveoxfYRv1tHozWGPMcuTBuvQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/require/Template+CSS+Template.css">
+    <link rel="stylesheet" href="/require/Product-focus+CSS+Template.css">
+    <title>THE DMZ ♢</title>
+</head>
+
+<body>
+    <div class="Main">
+        <div class="ontop active-blur hide fullhide" id="phone-nav">
+            <div class="active-ot hide fullhide" id="nav-main">
+                <div class="header-ot">
+                    <img src="/require/Data+img+logo-black.png" alt="" onclick="window.open('/home','_self')">
+                    <i class="fa-sharp fa-solid fa-circle-xmark exit" onclick="closenav()"></i>
+                </div>
+                <div class="body-ot">
+                    <div class="action-btn" act="false">
+                        <strong onclick="showList(this)">Product</strong>
+                        <div class="lister-normal lister" name="lister">
+                            <div class="listBtn">
+                                Chirstmas gift
+                            </div>
+                            <div class="listBtn">
+                                Best seller
+                            </div>
+                            <div class="listBtn">
+                                Limited items
+                            </div>
+                        </div>
+                    </div>
+                    <div class="action-btn" act="false">
+                        <strong onclick="showList(this)">Promo</strong>
+                        <div class="lister-normal lister" name="lister">
+                            <div class="listBtn">
+                                Chirstmas gift
+                            </div>
+                            <div class="listBtn">
+                                Best seller
+                            </div>
+                            <div class="listBtn">
+                                Limited items
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="webPage">
+            <div class="header">
+                <div class="header-nav" onclick="opennav()">
+                    <i class="fa-solid fa-list"></i>
+                </div>
+                <img src="/require/Data+img+logo-black.png" alt="" class="header-logo"
+                    onclick="window.open('/home','_self')">
+                <div class="header-action">
+                    <div class="action-button">
+                        <button onmouseenter="hoverButtonEnter(this)" onmouseleave="hoverButtonLeft(this)"
+                            onclick="window.open('/product?u=promotion')" style="color: black;">Promo</button>
+                        <p class="unactive-ud" style="color: black;"></p>
+                    </div>
+                    <div class="searchEngine">
+                        <input type="search" placeholder="What do you want...?" id="SearchInput"
+                            onkeydown="searchLiveChange(this)" onblur="stopSearchPanel()" onkeypress="checkEnter()"
+                            style="border: 1px solid rgba(70,70,70,0.5);">
+                        <div class="SearchPanel" id="SearchPanel" style="display: none;">
+
+                        </div>
+                    </div>
+                    <div class="action-button">
+                        <button onmouseenter="hoverButtonEnter(this)" onmouseleave="hoverButtonLeft(this)"
+                            onclick="window.open('/product?u=promotion')" style="color: black;">Product</button>
+                        <p class="unactive-ud" style="color: black;"></p>
+                    </div>
+                    <div class="account" onclick="accountCenter('click')" onmouseover="accountCenter('hover')"
+                        onmouseleave="accountCenter('mleave')" id="Signin-Btn">
+                        <i class="fa-solid fa-user" style="color: rgb(0, 0, 0);" id="acc-ico"></i>
+                        <span style="color: black;">Sign in</span>
+                        <div class="accountOption" style="display: none;">
+                            <div class="blurBg"></div>
+                            <ul>
+                                <li onclick="window.open('/cart', '_self')">
+                                    Shopping cart
+                                </li>
+                                <li onclick="alert('Not available now...')">Account manager</li>
+                                <li onclick="logout_simple()">Logout</li>
+                                <li onclick="alert('Supporter is busy...')">Support?</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-view">
+                <div class="View">
+                    <div>
+                        <div class="ProductImg">
+                        </div>
+                        <div class="SProductImg">
+                        </div>
+                    </div>
+
+                    <div class="inter">
+                        <h2 class="titleProduct">
+                            TITLE OF PRODUCT
+                        </h2>
+                        
+                        <p class="rate">
+                          Rate:   ⭐⭐⭐⭐⭐
+                        </p>
+                        <p class="Pricing">
+                            Price: 20.00$
+                        </p>
+                        <div class="Amount">
+                            <p>
+                                Amount
+                            </p>
+                            <div>
+                                <Button id="Minus" onclick="Minus1()">
+                                    -
+                                </Button>
+                                <input id="Amount" type="text" placeholder="1" disabled>
+                                <button onclick="Plus1()" id="Plus">
+                                    +
+                                </Button>
+                            </div>
+                        </div>
+                        <div class="Action">
+                            <button class="buybtn motionbtn" onclick="buynow()">Buy now</button>
+                            <button class="addtobtn motionbtn" onclick="addtocart()">🛒</button>
+                        </div>
+
+                    </div>
+                    
+
+                </div>
+                <div>
+
+                    <div class="Description">
+                        <div class="Autext">
+                            <div class="Circle">
+                                <img src="require/Data+img+logo-ico-blacked.png" alt="">
+                            </div>
+                            <div class="AuPost">
+                                Authorizer: The DMZ product team
+                            </div>
+                        </div>
+                        <div class="Desc">
+                            <p>Description</p>
+                        </div>
+
+                        <div class="Latin">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua.
+                                <br>
+                                Non pulvinar neque laoreet suspendisse.
+                                <br>
+                                At ultrices mi tempus imperdiet.
+                                Quam adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus urna.
+                                <br>
+                                lpsum faucibus vitae aliquet nec.
+                                <br>
+                                Risus feugiat in ante metus.
+                                <br>
+                                Nec ultrices dui sapien eget mi proin.
+                                <br>
+                                Ligula ullamcorper malesuada proin libero nunc consequat interdum varius sit.
+                                <br>
+                                Et malesuada fames ac turpis.
+                                <br>
+                                Blandit turpis cursus in hac habitasse platea dictumst.
+                                <br>
+                                Neque ornare aenean euismod elementum nisi quis eleifend quam adipiscing.
+                                <br>
+                                |Placerat duis ultricies lacus sed turpis tincidunt id aliquet.
+                                <br>
+                                Auctor elit sed vulputate mi. Quis eleifend quam adipiscing vitae proin sagittis nisl
+                                rhoncus mattis.
+                                <br>
+                                Consectetur a erat nam at. Euismod nisi porta lorem mollis aliquam ut. Nulla facilisi
+                                cras fermentum odio.
+                                <br>
+                            </p>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="footer">
+                <img src="/require/Data+img+logo.png" alt="" class="footer-logo">
+                <div class="packer">
+                    <ul>
+                        <li style="list-style: none;">REGISTERED AT [3+] NATION/COUNTRY</li>
+                        <li>REGISTERED AT ASIA</li>
+                        <li>REGISTERED AT U.K</li>
+                        <li>REGISTERED AT L.A</li>
+                    </ul>
+                    <ul>
+                        <li style="list-style: none;"> Choose your language:</li>
+                        <li style="list-style: none;"><select name="" id="lang">
+                                <option value="english">--EN--</option>
+                                <option value="Vietnamese">--VN--</option>
+                                <option value="">--FR--</option>
+                            </select></li>
+                    </ul>
+                    <ul>
+                        <li style="list-style: none;">-CONTACT-</li>
+                        <li><i class="fa-brands fa-facebook"></i> <span><a href="https://www.facebook.com/wpil.lampi"
+                                    style="color: white; font-size: medium;text-decoration: none;  font-family: 'Montserrat', sans-serif">Facebook</a></span>
+                        </li>
+                        <li><i class="fa-brands fa-facebook"></i> <span><a href="https://www.facebook.com/wpil.lampi"
+                                    style="color: white; font-size: medium;text-decoration: none;  font-family: 'Montserrat', sans-serif">Facebook</a></span>
+                        </li>
+                        <li><i class="fa-brands fa-facebook"></i> <span><a href="https://www.facebook.com/wpil.lampi"
+                                    style="color: white; font-size: medium;text-decoration: none;  font-family: 'Montserrat', sans-serif">Facebook</a></span>
+                        </li>
+
+                    </ul>
+                    s
+                </div>
+
+                <div style="border: 0.5px solid rgba(70, 70, 70, 0.5); width: 99%; height: 1px;margin: 0;padding: 0;">
+                </div>
+                <h5>Copyright © 2022 by The DMZ</h5>
+                <h5>Zeaky & TheMinh</h5>
+                <div style="border: 0.5px solid rgba(70, 70, 70, 0.5); width: 99%; height: 1px;margin: 0;padding: 0;">
+                </div>
+                <div class="AuthorizedZone">
+                    <img src="/require/Data+img+Authorized-1.png" alt="">
+                    <img src="/require/Data+img+Authorized-2.png" alt="">
+                    <img src="/require/Data+img+Authorized-3.jpg" alt="">
+                    <img src="/require/Data+img+authorized-4.jpeg" alt="">
+                    <img src="/require/Data+img+Authorized-5.png" alt="">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/require/Template+JS+template-min.js"></script>
+    <script src="/require/Product-focus+JS+minh.js"></script>
+    <script src="https://kit.fontawesome.com/9c3c828c74.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

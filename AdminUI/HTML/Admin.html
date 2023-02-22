@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css"
+        integrity="sha512-HqxHUkJM0SYcbvxUw5P60SzdOTy/QVwA1JJrvaXJv4q7lmbDZCmZaqz01UPOaQveoxfYRv1tHozWGPMcuTBuvQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/require/AdminUI+CSS+Admin.css">
+    <title>THE DMZ AdminUI</title>
+</head>
+
+<body>
+    <div class="header">
+        <img src="/require/Data+img+logo-black.png" alt="">
+    </div>
+    <div class="columns">
+        <div class="column is-one-quarter PageGrid">
+            <div class="box MainPage modeSelect">
+                <button class="button is-primary full-size">Product</button>
+                <button class="button is-primary full-size">Ads</button>
+                <button class="button is-primary full-size">Gift manager</button>
+                <button class="button is-primary full-size">Analytics</button>
+            </div>
+        </div>
+        <div class="column PageGrid">
+            <div class="box MainPage">
+                <div class="Product MainpageTab">
+                    <div class="ImageUploader">
+                        <div class="Preview">
+                            <img src="/require/Data+img+NonSelectImg.jpg" id="ImagePreview" alt="">
+                        </div>
+                        <div class="action">
+                            <input type="file" id="imageUpload">
+                            <button class="button" onclick="uploadImg()">Upload</button>
+                        </div>
+                    </div>
+                    <div class="ProductForm">
+                        <div class="Title">
+                            <label for="ProductTitle">Title: </label>
+                            <input type="text" id="ProductTitle">
+                        </div>
+                        <div class="Advance">
+                            <div class="Information">
+                                <h5>Description: </h5>
+                                <textarea id="Description"></textarea>
+                            </div>
+                            <div class="Property">
+                                <label for="ProductPrice">Price: </label>
+                                <input type="number" id="ProductPrice">
+                            </div>
+                        </div>
+                    </div>
+                    <button onclick="UploadPost()">Post upload</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="/require/AdminUI+JS+Admin.js"></script>
+</body>
+
+</html>

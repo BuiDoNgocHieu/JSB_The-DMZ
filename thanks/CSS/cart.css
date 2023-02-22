@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+body{
+    background-color: rgb(247, 247, 247);
+}
+.scroll-view{
+    overflow-y: scroll;
+}
+.cartLayout{
+    background-color: white;
+    width: 80vw;
+    margin: auto;
+    margin-top: 10vh;
+}
+#cartzone{
+    height: 85%;
+}
+.cartLayout .FormScreen > h1{
+    margin: auto;
+    text-align: center;
+}
+.FormScreen .form-letter{
+    margin-top: 2vh;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+.form-letter >h5{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.form-letter > button{
+    margin: 2vh;
+    width: 300px;
+}
+.FormScreen .chooseItem{
+    width: 100%;
+    max-height: 300px;
+    overflow-y: scroll;
+    border-left: 1px solid rgb(70, 70, 70);
+    border-right: 1px solid rgb(70, 70, 70);
+}
+.chooseItem .item{
+    width: 90%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+.item >img{
+    margin-left: 20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    object-fit: cover;
+}
+.item >input{
+    width: 25px;height: 25px;
+}

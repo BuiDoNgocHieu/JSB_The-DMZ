@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/require/Template+CSS+Template.css">
+    <link rel="stylesheet" href="/require/Template+CSS+Postsystem.css">
+    <link rel="shortcut icon" href="/require/Data+img+logo-ico.png" type="image/x-icon">
+    <title>THE DMZ ♢</title>
+</head>
+
+<body>
+    <div class="Main">
+        <div class="ontop active-blur hide fullhide" id="phone-nav">
+            <div class="active-ot hide fullhide" id="nav-main">
+                <div class="header-ot">
+                    <img src="/require/Data+img+logo-black.png" alt="" onclick="window.open('/home','_self')">
+                    <i class="fa-sharp fa-solid fa-circle-xmark exit" onclick="closenav()"></i>
+                </div>
+                <div class="body-ot">
+                    <div class="action-btn" act="false">
+                        <strong onclick="showList(this)">Product</strong>
+                        <div class="lister-normal lister" name="lister">
+                            <div class="listBtn">
+                                Chirstmas gift
+                            </div>
+                            <div class="listBtn">
+                                Best seller
+                            </div>
+                            <div class="listBtn">
+                                Limited items
+                            </div>
+                        </div>
+                    </div>
+                    <div class="action-btn" act="false">
+                        <strong onclick="showList(this)">Promo</strong>
+                        <div class="lister-normal lister" name="lister">
+                            <div class="listBtn">
+                                Chirstmas gift
+                            </div>
+                            <div class="listBtn">
+                                Best seller
+                            </div>
+                            <div class="listBtn">
+                                Limited items
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="background">
+            <div class="bg-datetime">
+                <img src="/require/Data+img+BG-aim.jpg" alt="" id="img-bg-3">
+                <canvas id="bg-snow"></canvas>
+                <div class="bg-countdown" id="dateTimeCount">
+                    <div class="countBox" id="count-day">
+                        <p>
+                            DAY
+                        </p>
+                        <div id="DayDisplay" class="display-count">
+                            <p>
+                                00
+                            </p>
+                        </div>
+                    </div>
+                    <div class="countBox" id="count-hour">
+                        <p>
+                            HOUR
+                        </p>
+                        <div id="HourDisplay" class="display-count">
+                            <p>
+                                00
+                            </p>
+                        </div>
+                    </div>
+                    <div class="countBox" id="count-min">
+                        <p>
+                            MIN
+                        </p>
+                        <div id="MinDisplay" class="display-count">
+                            <p>
+                                00
+                            </p>
+                        </div>
+                    </div>
+                    <div class="countBox" id="count-sec">
+                        <p>
+                            SEC
+                        </p class="display-count">
+                        <div id="SecDisplay" class="display-count">
+                            <p>
+                                00
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="webPage">
+            <div class="header">
+                <div class="header-nav" onclick="opennav()">
+                    <i class="fa-solid fa-list"></i>
+                </div>
+                <img src="/require/Data+img+logo.png" alt="" class="header-logo" onclick="window.open('/home','_self')">
+                <div class="header-action">
+                    <div class="action-button">
+                        <button onmouseenter="hoverButtonEnter(this)"
+                            onmouseleave="hoverButtonLeft(this)"
+                            onclick="window.open('/product?u=promotion')" style="color: white;">Promo</button>
+                        <p class="unactive-ud" style="color: white;"></p>
+                    </div>
+                    <div class="searchEngine">
+                        <input type="search" placeholder="What do you want...?" id="SearchInput" onkeydown="searchLiveChange(this)" onblur="stopSearchPanel()" onkeypress="checkEnter()" style="border: 1px solid rgba(70,70,70,0.5);">
+                        <div class="SearchPanel" id="SearchPanel" style="display: none;">
+    
+                        </div>
+                    </div>
+                    <div class="action-button">
+                        <button onmouseenter="hoverButtonEnter(this)"
+                            onmouseleave="hoverButtonLeft(this)"
+                            onclick="window.open('/product?u=promotion')" style="color: white;">Product</button>
+                        <p class="unactive-ud" style="color: white;"></p>
+                    </div>
+                    <div class="account" onclick="accountCenter('click')" onmouseover="accountCenter('hover')" onmouseleave="accountCenter('mleave')" id="Signin-Btn">
+                        <i class="fa-solid fa-user" style="color: white;" id="acc-ico"></i>
+                        <span style="color: white;">Sign in</span>                    
+                        <div class="accountOption" style="display: none;">
+                            <div class="blurBg"></div>
+                            <ul>
+                                <li onclick="window.open('/cart', '_self')">
+                                    Shopping cart
+                                </li>
+                                <li onclick="alert('Not available now...')">Account manager</li>
+                                <li onclick="logout_simple()">Logout</li>
+                                <li onclick="alert('Supporter is busy...')">Support?</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="ghost">
+            </div>
+            <div class="Banner">
+                <div class="sliderContain" style="height: 25vh; width: 100vw; margin: auto;" id="Banner-localAds">
+                    <div class="Controller">
+                        <div class="ButtonLeft btnIco" onclick="Slider_prev(this)"><i
+                                class="fa-sharp fa-solid fa-less-than"></i></div>
+                        <div class="TabPanel">
+                            <div class="imgTar">0/0</div>
+                        </div>
+                        <div class="ButtonRight btnIco" onclick="Slider_next(this)"><i
+                                class="fa-sharp fa-solid fa-greater-than"></i></div>
+                    </div>
+                    <div class="item fade"></div>
+                </div>
+            </div>
+            <div class="minhdiv">
+                <!--Sell zone-->
+                <div style="background-color:black" class="BestSeller">
+                    <h1 class="Pacifico" style="color: #ffffff;text-align: center; margin: 0;">
+                        BEST SELLER
+                    </h1>
+                </div>
+                <div class="PostSlide" id="BestsellerPostSlider">
+
+                </div>
+                <div class="seemoreBtn" onclick="window.open('/product?s=bestseller')">
+                    More >
+                </div>
+                <div style="background-color: black" class="BestSeller">
+                    <h1 class="Pacifico" style="color: #ffffff;text-align: center;">
+                        LIMITED ITEMS
+                    </h1>
+                </div>
+                <div class="PostSlide" id="LimitedPostSlider">
+
+                </div>
+                <div class="seemoreBtn" onclick="window.open('/product?s=limiteditem')">
+                    More >
+                </div>
+            </div>
+            <div class="footer">
+                <img src="/require/Data+img+logo.png" alt="" class="footer-logo">
+                <div class="packer">
+                    <ul>
+                        <li style="list-style: none;">REGISTERED AT [3+] NATION/COUNTRY</li>
+                        <li>REGISTERED AT ASIA</li>
+                        <li>REGISTERED AT U.K</li>
+                        <li>REGISTERED AT L.A</li>
+                    </ul>
+                    <ul>
+                        <li style="list-style: none;"> Choose your language:</li>
+                        <li style="list-style: none;"><select name="" id="lang">
+                                <option value="english">--EN--</option>
+                                <option value="Vietnamese">--VN--</option>
+                                <option value="">--FR--</option>
+                            </select></li>
+                    </ul>
+                    <ul>
+                        <li style="list-style: none;">-CONTACT-</li>
+                        <li><i class="fa-brands fa-facebook"></i> <span><a href="https://www.facebook.com/wpil.lampi"
+                                    style="color: white; font-size: medium;text-decoration: none;  font-family: 'Montserrat', sans-serif">Facebook</a></span>
+                        </li>
+                        <li><i class="fa-brands fa-facebook"></i> <span><a href="https://www.facebook.com/wpil.lampi"
+                                    style="color: white; font-size: medium;text-decoration: none;  font-family: 'Montserrat', sans-serif">Facebook</a></span>
+                        </li>
+                        <li><i class="fa-brands fa-facebook"></i> <span><a href="https://www.facebook.com/wpil.lampi"
+                                    style="color: white; font-size: medium;text-decoration: none;  font-family: 'Montserrat', sans-serif">Facebook</a></span>
+                        </li>
+
+                    </ul>
+s
+                </div>
+                
+                <div style="border: 0.5px solid rgba(70, 70, 70, 0.5); width: 99%; height: 1px;margin: 0;padding: 0;"></div>
+                <h5>Copyright © 2022 by The DMZ</h5>
+                <h5>Zeaky & TheMinh</h5>
+                <div style="border: 0.5px solid rgba(70, 70, 70, 0.5); width: 99%; height: 1px;margin: 0;padding: 0;"></div>
+                <div class="AuthorizedZone">
+                    <img src="/require/Data+img+Authorized-1.png" alt="">
+                    <img src="/require/Data+img+Authorized-2.png" alt="">
+                    <img src="/require/Data+img+Authorized-3.jpg" alt="">
+                    <img src="/require/Data+img+authorized-4.jpeg" alt="">
+                    <img src="/require/Data+img+Authorized-5.png" alt="">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type='text/javascript' src="require/Template+JS+postloader.js"></script>
+    <script type='text/javascript' src="require/Slider+zeakSlide.js"></script>
+    <script type='text/javascript' src="require/Template+JS+PostDisplay-min.js"></script>
+    <script type='text/javascript' src="require/Template+JS+AdvanceRender.js"></script>
+    <script type='text/javascript' src="require/Template+JS+template.js"></script>
+    <script type='text/javascript' src="https://kit.fontawesome.com/9c3c828c74.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

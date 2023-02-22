@@ -1,0 +1,89 @@
+body{
+    background: rgb(253, 253, 253);
+    min-height: 100%;
+}
+html {
+    height: 100%;
+}
+.Pageview{
+    margin-top: 8vh;
+    height: max-content;
+    display: flex;
+}
+.Filter{
+    border: 1px solid black;
+    background-color: white;
+    width: 15vw;
+    height: 100%;
+    position: static;
+}
+.Filter .FilterHeader{
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:small;
+    height: 15%;
+}
+.Filter .FilterHeader > i{
+    color: black;
+    margin-left: 5px;
+}
+.Filter .FilterOption{
+    height: 85%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+}
+.FilterOption .FilterElement{
+    height: 6%;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}
+.FilterElement > span{
+    font-family: "Montserrat", sans-serif;
+    font-size: medium;
+    margin-left: calc(25% - 10px);
+}
+.FilterElement > h5{
+    font-family: "Montserrat", sans-serif;
+}
+.FilterElement > button{
+    width: 50%;
+    height: 120%;
+    background-color: white;
+    border-radius: 5px;
+}
+.FilterOption > h3{
+    font-family: "Montserrat", sans-serif;
+    align-self: center;
+}
+#filterPriceRange{
+    width: 40%;
+}
+.PostSlide {
+    width: 80vw;
+    margin-left: 10px;
+}
+.PageLine{
+    margin-top: 30px;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+}
+.PageLine .pageNumber{
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    background-color: white;
+    text-align: center;
+    border-radius: 5px;
+    margin: 0.2%;
+    user-select: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

@@ -1,0 +1,95 @@
+:root{
+  --wobDeg: 20deg;
+}
+body{
+  background: rgb(230,45,45);
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+}
+canvas {
+	display: block;
+}
+.header{
+  align-self: flex-start;
+}
+.webPage{
+  top: 0;
+  height:100vh;
+  position: relative;
+  display: flex;
+}
+
+.giftBackground{
+  margin: auto;
+  rotate: 0deg;
+  align-self: center;
+  justify-content: center;
+  background-color: white;
+  width: 35vw;
+  height: 35vw;
+  border-radius: 70vw;
+  align-items: center;
+  display: flex;
+  border: 2vw double black;
+  flex-direction: column;
+}
+.GiftDisplay{
+  position: relative;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.giftImg{
+  transition: 0.2s;
+  padding: 0;
+  margin: 0px;
+  width: 20vw;
+  margin: auto;
+  float: left;
+
+}
+.GiftOpenText{
+  align-self: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2vw;
+}
+
+@keyframes shake {
+  0%   { transform: translate(1px, 1px) rotate(0deg); }
+  10%  { transform: translate(-1px, -2px) rotate(-1deg); }
+  20%  { transform: translate(-3px, 0px) rotate(1deg); }
+  30%  { transform: translate(3px, 2px) rotate(0deg); }
+  40%  { transform: translate(1px, -1px) rotate(1deg); }
+  50%  { transform: translate(-1px, 2px) rotate(-1deg); }
+  60%  { transform: translate(-3px, 1px) rotate(0deg); }
+  70%  { transform: translate(3px, 1px) rotate(-1deg); }
+  80%  { transform: translate(-1px, -1px) rotate(1deg); }
+  90%  { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(0px, 0px) rotate(0deg); }
+}
+.giftBackground:hover{
+  cursor: pointer;
+  animation: shake 3s infinite;
+}
+.shake{
+  animation: shake 0.3s infinite;
+}
+.letterText{
+  width: 15vw;
+  align-self: center;
+  top: 2vw;
+  font-size: 1vw;
+  font-family: "Montserrat", sans-serif;
+  position: absolute;
+  z-index: 7;
+}
+@keyframes imgZoom {
+  0% {width: 0vw;}
+  100%{ width: 20vw;}
+} 
+.ImgLetterZoom{
+  transition: 0.5s;
+  animation: imgZoom 3s;
+}

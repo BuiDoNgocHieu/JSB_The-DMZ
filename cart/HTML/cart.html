@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css" integrity="sha512-HqxHUkJM0SYcbvxUw5P60SzdOTy/QVwA1JJrvaXJv4q7lmbDZCmZaqz01UPOaQveoxfYRv1tHozWGPMcuTBuvQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+    <title>your cart 🛒</title>
+    <link rel="stylesheet" href="/require/Template+CSS+Template.css">
+    <link rel="stylesheet" href="/require/cart+CSS+cart.css">
+    <link rel="shortcut icon" href="/require/Data+img+logo-ico.png" type="image/x-icon">
+</head>
+<body>
+    <div class="webPage">
+        <div class="header">
+            <div class="header-nav" onclick="opennav()">
+                <i class="fa-solid fa-list"></i>
+            </div>
+            <img src="/require/Data+img+logo-black.png" alt="" class="header-logo" onclick="window.open('/home','_self')">
+            <div class="header-action">
+                <div class="action-button">
+                    <button onmouseenter="hoverButtonEnter(this)"
+                        onmouseleave="hoverButtonLeft(this)"
+                        onclick="window.open('/product?u=promotion')" style="color: black;">Promo</button>
+                    <p class="unactive-ud" style="color: black;"></p>
+                </div>
+                <div class="searchEngine">
+                    <input type="search" placeholder="What do you want...?" id="SearchInput" onkeydown="searchLiveChange(this)" onblur="stopSearchPanel()" onkeypress="checkEnter()" style="border: 1px solid rgba(70,70,70,0.5);">
+                    <div class="SearchPanel" id="SearchPanel" style="display: none;">
+                    </div>
+                </div>
+                <div class="action-button">
+                    <button onmouseenter="hoverButtonEnter(this)"
+                        onmouseleave="hoverButtonLeft(this)"
+                        onclick="window.open('/product?u=promotion')" style="color: black;">Product</button>
+                    <p class="unactive-ud" style="color: black;"></p>
+                </div>
+                <div class="account" onclick="accountCenter('click')" onmouseover="accountCenter('hover')" onmouseleave="accountCenter('mleave')" id="Signin-Btn">
+                    <i class="fa-solid fa-user" style="color: rgb(0, 0, 0);" id="acc-ico"></i>
+                    <span style="color: black;">Sign in</span>                    
+                    <div class="accountOption" style="display: none;">
+                        <div class="blurBg"></div>
+                        <ul>
+                            <li onclick="window.open('/cart', '_self')">
+                                Shopping cart
+                            </li>
+                            <li onclick="alert('Not available now...')">Account manager</li>
+                            <li onclick="logout_simple()">Logout</li>
+                            <li onclick="alert('Supporter is busy...')">Support?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cartLayout">
+            <div class="columns" id="cartzone">
+                <div class="column" id="cartview">
+                    <h2>Your cart</h2>
+                    <div class="scroll-view cart-contain">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="Payment">
+                <div class="priceDisplay">
+    
+                    <div class="display">
+                        <p id="display-price" total="0">
+                            0.00$
+                        </p>
+                    </div>
+                </div>
+                <div class="button-pay">
+                    <div class="pay-btn" onclick="buynow()">
+                        <p>
+                            Buy now
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <img src="/require/Data+img+logo.png" alt="" class="footer-logo">
+            <div class="packer">
+                <ul>
+                    <li style="list-style: none;">REGISTERED AT [3+] NATION/COUNTRY</li>
+                    <li>REGISTERED AT ASIA</li>
+                    <li>REGISTERED AT U.K</li>
+                    <li>REGISTERED AT L.A</li>
+                </ul>
+                <ul>
+                    <li style="list-style: none;"> Choose your language:</li>
+                    <li style="list-style: none;"><select name="" id="lang">
+                            <option value="english">--EN--</option>
+                            <option value="Vietnamese">--VN--</option>
+                            <option value="">--FR--</option>
+                        </select></li>
+                </ul>
+                <ul>
+                    <li style="list-style: none;">-CONTACT-</li>
+                    <li><i class="fa-brands fa-facebook"></i> <span><a href="https://www.facebook.com/wpil.lampi"
+                                style="color: white; font-size: medium;text-decoration: none;  font-family: 'Montserrat', sans-serif">Facebook</a></span>
+                    </li>
+                    <li><i class="fa-brands fa-facebook"></i> <span><a href="https://www.facebook.com/wpil.lampi"
+                                style="color: white; font-size: medium;text-decoration: none;  font-family: 'Montserrat', sans-serif">Facebook</a></span>
+                    </li>
+                    <li><i class="fa-brands fa-facebook"></i> <span><a href="https://www.facebook.com/wpil.lampi"
+                                style="color: white; font-size: medium;text-decoration: none;  font-family: 'Montserrat', sans-serif">Facebook</a></span>
+                    </li>
+
+                </ul>
+s
+            </div>
+            
+            <div style="border: 0.5px solid rgba(70, 70, 70, 0.5); width: 99%; height: 1px;margin: 0;padding: 0;"></div>
+            <h5>Copyright © 2022 by The DMZ</h5>
+            <h5>Zeaky & TheMinh</h5>
+            <div style="border: 0.5px solid rgba(70, 70, 70, 0.5); width: 99%; height: 1px;margin: 0;padding: 0;"></div>
+            <div class="AuthorizedZone">
+                <img src="/require/Data+img+Authorized-1.png" alt="">
+                <img src="/require/Data+img+Authorized-2.png" alt="">
+                <img src="/require/Data+img+Authorized-3.jpg" alt="">
+                <img src="/require/Data+img+authorized-4.jpeg" alt="">
+                <img src="/require/Data+img+Authorized-5.png" alt="">
+
+            </div>
+        </div>
+    </div>
+    <script src="/require/cart+JS+main.js"></script>
+    <script src="/require/Template+JS+template-min.js"></script>
+
+    
+</body>
+</html>

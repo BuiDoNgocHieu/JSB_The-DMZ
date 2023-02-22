@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/require/Template+CSS+Template.css">
+    <link rel="stylesheet" href="/require/Unbox+CSS+Unbox.css">
+    <title>THE DMZ ♢</title>
+</head>
+
+<body>
+    <div class="Main">
+        <div class="ontop active-blur hide fullhide" id="phone-nav">
+            <div class="active-ot hide fullhide" id="nav-main">
+                <div class="header-ot">
+                    <img src="/require/Data+img+logo-black.png" alt="">
+                    <i class="fa-sharp fa-solid fa-circle-xmark exit" onclick="closenav()"></i>
+                </div>
+                <div class="body-ot">
+                    <div class="action-btn" act="false">
+                        <strong onclick="showList(this)">Product</strong>
+                        <div class="lister-normal lister" name="lister">
+                            <div class="listBtn">
+                                Chirstmas gift
+                            </div>
+                            <div class="listBtn">
+                                Best seller
+                            </div>
+                            <div class="listBtn">
+                                Limited items
+                            </div>
+                        </div>
+                    </div>
+                    <div class="action-btn" act="false">
+                        <strong onclick="showList(this)">Promo</strong>
+                        <div class="lister-normal lister" name="lister">
+                            <div class="listBtn">
+                                Chirstmas gift
+                            </div>
+                            <div class="listBtn">
+                                Best seller
+                            </div>
+                            <div class="listBtn">
+                                Limited items
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="background">
+            <canvas id="canvas"></canvas>
+        </div>
+        <div class="webPage">
+            <div class="header">
+                <div class="header-nav" onclick="opennav()">
+                    <i class="fa-solid fa-list"></i>
+                </div>
+                <img src="/require/Data+img+logo.png" alt="" class="header-logo" onclick="window.open('/home','_self')">
+                <div class="header-action">
+                    <div class="action-button">
+                        <button onmouseenter="hoverButtonEnter(this)"
+                            onmouseleave="hoverButtonLeft(this)"
+                            onclick="window.open('/product?u=promotion')">Promo</button>
+                        <p class="unactive-ud"></p>
+                    </div>
+                    <div class="searchEngine">
+                        <input type="search" placeholder="What do you want...?" id="SearchInput" onkeydown="searchLiveChange(this)" onblur="stopSearchPanel()" onkeypress="checkEnter()">
+                        <div class="SearchPanel" id="SearchPanel" style="display: none;">
+
+                        </div>
+                    </div>
+                    <div class="action-button">
+                        <button onmouseenter="hoverButtonEnter(this)"
+                            onmouseleave="hoverButtonLeft(this)"
+                            onclick="window.open('/product?u=promotion')">Product</button>
+                        <p class="unactive-ud"></p>
+                    </div>
+                    <div class="account">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Sign in</span>
+                    </div>
+                </div>
+            </div>
+            <div class="giftBackground" onclick="GiftRes()" id="giftContain" phase = "Closed">
+                <div class="GiftDisplay">
+                    <img src="/require/Data+img+Letter-closed.png" alt="" class="giftImg" id="Letter">
+                    <div class="letterText">
+                        
+                    </div>
+                    <div class="GiftOpenText">
+                        Open the letter!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/require/Template+JS+template-min.js"></script>
+    <script src="/require/Unbox+JS+Unbox.js"></script>
+    <script src="/require/PageSetup.js"></script>
+    <script src="https://kit.fontawesome.com/9c3c828c74.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

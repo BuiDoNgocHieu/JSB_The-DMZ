@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+body{
+    background-color: rgb(247, 247, 247);
+}
+.scroll-view{
+    overflow-y: scroll;
+}
+.cartLayout{
+    background-color: white;
+    width: 80vw;
+    margin: auto;
+    margin-top: 10vh;
+}
+#cartzone{
+    height: 85%;
+}
+#cartview{
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+#cartview > h2{
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+}
+#cartview .cart-contain{
+    width: 100%;
+    height: 100%;
+}
+.cart-contain .product-block{
+    width: 100%;
+    padding: 5px;
+    height: 110px;
+    display: flex;
+    margin: auto;
+    border-bottom: 1px solid rgb(235, 235, 235);
+    align-items: center;
+}
+
+.product-block > img{
+    width: 100px;
+    height: 100px;
+    object-fit:cover;
+    margin-left: 10px;
+}
+.product-block .info{
+    width: calc(100% - 100px - 20%);
+    height: 100%;
+}
+.product-block .interact{
+    width: calc(100% - 100px - (100% - 100px - 20%));
+    height: 100%;
+    display: flex;
+    margin-top: 3%;
+}
+.interact .square-button{
+    width: 25px;
+    height: 25px;
+    border: 1px solid rgb(70, 70, 70);
+    text-align: center;
+    background-color: rgb(70, 70, 70);
+    color: white;
+    user-select: none;
+}
+.interact > input{
+    width: calc(100%-40px*2);
+    height: 25px;
+    text-align: center;
+}
+.info .author{
+    color: white;
+    text-align: center;
+}
+.info .title{
+    font-size: large;
+    margin-left: 5px;
+    margin-top: 1%;
+}
+.info .price{
+    margin-left: 5px;
+}
+.product-block .select{
+    width: 25px;
+    height: 25px;
+    margin-top: calc( - 25px);
+}
+.cartLayout .Payment{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Payment .priceDisplay{
+    width: 300px;
+    height: 45px;
+}
+.Payment .display{
+    width: 300px;
+    height: 45px;
+    text-align: center;
+    font-size: large;
+    background-color: rgb(252, 252, 252);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.display .p{
+    font-size: large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.Payment .button-pay .pay-btn{
+    width: 200px;
+    height: 45px;
+    color: white;
+    text-align: center;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pay-btn > p{
+    font-size: medium;
+    user-select: none;
+}
+.pay-btn:hover{
+    cursor: pointer;
+    background-color: rgb(20, 20, 20);
+}

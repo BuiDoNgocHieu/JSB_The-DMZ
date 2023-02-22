@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&family=Pacifico&family=Roboto:wght@900&display=swap');
+.Background{
+    width: 100vw; 
+    background-color:#C41010 ;
+    position: absolute;
+    z-index: -1;
+}
+.BackgroundImg{
+    display: flex;
+    align-items: center;
+}
+.BackgroundImg>img{
+    width: 50vw; height: 100vh; 
+    object-fit: cover;
+}
+.BackgroundImg-left{
+    transition: 0.5s;
+    margin-left: 0;
+}
+.BackgroundImg-right{
+    transition: 0.5s;
+    margin-left: 50vw;
+}
+.Logo{
+    width: 50vw;
+    position: absolute;
+    z-index: 5;
+}
+.Logo>img{
+    margin-top: 2vh;
+    width: 15vw
+}
+.logoImg-left{
+    transition: 0.5s;
+    margin-left: 0vw;
+}
+.logoImg-right{
+    transition: 0.5s;
+    margin-left: 35vw;
+}
+.Logo-left{
+    transition: 0.5s;
+    margin-left: 0vw;
+}
+.Logo-right{
+    transition: 0.5s;
+    margin-left: 50vw;
+}
+body{
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.circle{
+    position: absolute;
+    border-radius: 100vh;
+    width: 10vw; height: 10vw;
+    z-index: 3;
+    background-color: white;
+    margin: 45vw;    
+    margin-top: calc(50vh - 10vw);
+    border-right:  1px solid black;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle-left{
+    transition: 0.5s;
+    transform: rotateZ(90deg);
+}
+.circle-right{
+    transition: 0.5s;
+    transform: rotateZ(-90deg);
+
+}
+.circle-right > h1{
+    transition: 1s;
+    width: 50%;
+    transform: rotateZ(90deg);
+}
+.circle-left > h1{
+    transition: 1s;
+    width: 50%;
+    transform: rotateZ(-90deg);
+}
+.circle > h1 > img{
+    width: 100%;
+    opacity: 0.5;
+}
+.Greetings{
+    font-family: 'Open Sans', sans-serif;
+}
+.halfBackground{
+    background-color: white;
+    position: absolute;
+    z-index: 2;
+    width: 50vw; height: 100vh;
+
+}
+.halfBackground>h1 {
+    font-family: 'Nanum Gothic', sans-serif;
+    text-align: center;
+}
+.halfBackground>h5{
+    text-align: center;
+    margin-top: 23vh;
+    color: #707070
+    ;
+}
+.halfBackground-left{
+    transition: 0.5s;
+    margin-left: 0;
+}
+.halfBackground-right{
+    transition: 0.5s;
+    margin-left: 50vw;
+}
+.InputSpace{
+    margin-top: 2vh;
+    margin-left: 10vw;
+    height: 5vh;
+}
+.InputSpace>h6{
+    margin: 0;
+    font-family: 'Open Sans', sans-serif; 
+}
+.InputSpace>input:focus{
+    outline: none;
+}
+.InputSpace>input{
+    font-family: 'Open Sans', sans-serif; 
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    width: 30vw;
+    height: 70%;
+    margin-top: 0vh;
+    font-size: large;
+}
+.ForgotPassword{
+    width: 30vw; 
+    display: flex;
+    justify-content: end;
+    margin: auto;
+}
+.ForgotPassword>h6{
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+.SigninButton{
+    transition: 0.2s;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 25vw;
+    margin:auto;
+    font-size: medium;
+    color: white;
+    background-color: black;
+    text-align: center; 
+    width: 200px; height: 30px;
+    font-family: 'Nanum Gothic', sans-serif;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.SigninButton:hover{
+    transition: 0.2s;
+    cursor: pointer;
+    background-color: #202020;
+}
+.SigninButton > p{
+    user-select: none;
+    font-family: 'Nanum Gothic', sans-serif;
+    text-align: center; 
+}
+
+.OR{
+    width: 24vw;
+    margin-top: 7vh;
+    margin-left: 13vw;
+}
+.GG{
+    width: 9vw;
+    margin-top: 3vh;
+    margin-left: 20vw;
+}
+.SignUp{
+    
+    width: 50%;
+    margin-top: 7vh;
+    margin-left: 25%;
+    text-align: center;
+}
+#CreateAccount:hover{
+    cursor: pointer;
+    user-select: none;
+    color: #C41010;
+}

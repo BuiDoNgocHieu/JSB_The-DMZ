@@ -1,0 +1,19 @@
+{
+    "Name": "testSlide",
+    "index": 0,
+    "duration": 2500,
+    "Block": [
+      {
+        "url": "/require/Data+Banner+Banner-img+Sale-off-banner.png",
+        "cap": "info"
+      },
+      {
+        "url": "/require/Data+Banner+Banner-img+giftArrival.jpg",
+        "cap": "info"
+      },
+      {
+        "url": "/require/Data+Banner+Banner-img+sale-off.jpg",
+        "cap": "info"
+      }
+    ]
+}
